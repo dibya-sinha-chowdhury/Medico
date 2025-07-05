@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Medico</title>
+  <link rel="stylesheet" href="Service.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+    }
+
+    header {
+      background: #007bff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    nav img {
+      height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid #fff;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .appointment-form input,
+    .appointment-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .appointment-form button {
+      background: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .card h4 {
+      margin: 10px 0 5px;
+    }
+
+    .emergency,
+    .ambulance {
+      text-align: center;
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .ambulance img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <a href="index.html"><img src="img/medico logo.png" alt="Logo" /></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="departments.html">Departments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner-full">
+    <img src="img/.jpg" alt="Appointment Banner" />
+  </section>
+  
+  
+  <section class="section">
+    <h2>Your Health is Our Priority</h2>
+    <p>
+      At Medico, we believe in delivering compassionate and timely care. Whether you're visiting for a routine check-up or seeking specialized consultation, our dedicated team is here to support your journey to better health. 
+    </p>
+    <p>
+      Booking an appointment is quick and simple. Choose your preferred department and date, and let us take care of the rest. We’re committed to minimizing wait times and ensuring each patient receives the attention they deserve.
+    </p>
+    <p>
+      Your well-being matters to us — book your appointment today and experience healthcare that truly cares.
+    </p>
+  </section>
+  
+
+  <!-- Appointment Booking -->
+  <section class="section">
+    <h2>Book an Appointment</h2>
+    <form class="appointment-form">
+      <input type="text" placeholder="Your Name" />
+      <input type="email" placeholder="Your Email" />
+      <input type="date" />
+      <select>
+        <option>Select Department</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>General</option>
+      </select>
+      <button>Book Now</button>
+    </form>
+  </section>
+
+  <!-- Consultant Info -->
+  <section class="section">
+    <h2>Our Consultants</h2>
+    <div class="grid">
+      <div class="card">
+
+            <img src="img/Doctor1.jpg" alt= />
+            <h4>Dr. John Smith</h4>
+            <p>Cardiologist</p>
+        
+      </div>
+      <div class="card">
+        <img src="img/Doctor3.jpg" alt="" />
+        <h4>Dr. Ayesha Rahman</h4>
+        <p>Neurologist</p>
+      </div>
+      <div class="card">
+        <img src="img/Dakhtor2.jpg" alt="" />
+        <h4>Dr. Karim Ali</h4>
+        <p>General Physician</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments -->
+  <section class="section">
+    <h2>Departments</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/heart1.jpg" alt="" />
+        <h4>Cardiology</h4><p>Heart treatment</p></div>
+      <div class="card">
+        <img src="img/brain.jpg" alt="" />
+        <h4>Neurology</h4><p>Brain and Nerves</p></div>
+      <div class="card">
+        <img src="img/ortho.webp" alt="" />
+        <h4>Orthopedics</h4><p>Bone & Joints</p></div>
+      <div class="card">
+        <img src="img/pedi.jpg" alt="" />
+        <h4>Pediatrics</h4><p>Child Care</p></div>
+    </div>
+  </section>
+
+  <!-- Emergency -->
+  <section class="section emergency">
+    <h2>Emergency Call</h2>
+    <p>📞 Call us now: <strong>+880 1716757857</strong></p>
+  </section>
+
+  <!-- Ambulance -->
+  <section class="section ambulance">
+    <h2>24/7 Ambulance Service</h2>
+    <p>We are ready anytime, anywhere</p>
+    <img src="img/ambulance.jpg" alt="Ambulance" />
+  </section>
+
+  <!-- Health Tips -->
+  <section class="section">
+    <h2>Health Tips</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/water.webp" alt="" />
+        <h4>💧 Stay Hydrated</h4><p>Water is essential for every function in your body — from regulating temperature to supporting digestion and circulation. Staying properly hydrated helps maintain your energy levels, improves skin health, and flushes out toxins. Aim to drink at least 8 glasses (2–3 liters) of water daily, and even more if you're active or exposed to hot weather. Don’t wait until you’re thirsty — make hydration a routine part of your day.</p></div>
+      <div class="card">
+        <img src="img/Sleep.jpg" alt="" />
+        <h4>😴 Sleep Well</h4><p>Quality sleep is one of the most critical factors for overall well-being. Getting 7–8 hours of restful sleep each night allows your body to recover, boosts your immune system, supports mental clarity, and balances your mood. Poor sleep over time can lead to serious health problems like high blood pressure, diabetes, and depression. Establish a consistent sleep schedule, avoid screens before bedtime, and create a peaceful sleeping environment for better rest.</p></div>
+      <div class="card">
+        <img src="img/exercise.webp" alt="" />
+        <h4>🏃 Exercise</h4><p>Regular physical activity is key to a healthy lifestyle. Just 30 minutes of moderate exercise a day — such as brisk walking, cycling, or light jogging — can significantly improve cardiovascular health, strengthen muscles and bones, reduce stress, and help control body weight. Exercise also releases endorphins, which are natural mood lifters. It doesn't have to be intense — consistency is what matters most. Start small and build up gradually.</p></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Medico. All rights reserved.
+  </footer>
+</body>
+</html>
