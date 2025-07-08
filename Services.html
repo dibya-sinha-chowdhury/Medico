@@ -103,21 +103,21 @@
 
         /* ---------- Banner ---------- */
 
-     <br>  </br>
+        /* ===== Hero Banner ===== */
         .hero-banner {
             width: 100%;
             overflow: hidden;
-          
+
         }
 
-        .hero-banner img {
+        <br></br><br></br>.hero-banner img {
             width: 100%;
             /* height:—responsive clamp: 220px(min)‒35vw(ideal)‒450px(max) */
             height: clamp(220px, 35vw, 450px);
             object-fit: cover;
-            
+
             display: block;
-            
+
         }
     </style>
 </head>
@@ -175,7 +175,7 @@
 
         <!-- Hero / Banner Section -->
         <section class="hero-banner">
-           
+
             <img src="img/Banner main.jpg" alt="Medico Services Banner">
         </section>
 
@@ -209,89 +209,138 @@
             </section>
 
             <!-- Appointment Booking -->
-            <section class="section">
-                <h2>Book an Appointment</h2>
-                <form class="appointment-form">
-                    <input type="text" placeholder="Your Name" />
-                    <input type="email" placeholder="Your Email" />
-                    <input type="date" />
-                    <select>
-                        <option selected disabled>Select Department</option>
-                        <option>Cardiology</option>
-                        <option>Neurology</option>
-                        <option>General</option>
-                    </select>
-                    <button type="submit">Book Now</button>
-                </form>
+            <section id="appointment-booking" style="background-color: #f5faff; padding: 60px 0;">
+                <div
+                    style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; padding: 0 20px;">
+
+                    <!-- Left: Appointment Image -->
+                    <div style="flex: 1 1 400px;">
+                        <img src="img/ticket.jpg" alt="Book Appointment"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #333;">Book your
+                            consultation with our expert doctors</p>
+                    </div>
+
+                    <!-- Right: Appointment Form -->
+                    <div style="flex: 1 1 400px;">
+                        <h2 style="color: #007BFF; margin-bottom: 25px;">Book Appointment</h2>
+                        <form onsubmit="return submitAppointment()"
+                            style="display: flex; flex-direction: column; gap: 20px;">
+
+                            <div>
+                                <label for="patient-name" style="font-weight: 500; color: #333;">Patient
+                                    Name:</label><br>
+                                <input type="text" id="patient-name" name="patient-name" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="patient-contact" style="font-weight: 500; color: #333;">Contact:</label><br>
+                                <input type="text" id="patient-contact" name="patient-contact" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="department" style="font-weight: 500; color: #333;">Department:</label><br>
+                                <select id="department" name="department" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                                    <option value="">Select Department</option>
+                                    <option value="General">General</option>
+                                    <option value="Medicine">Medicine</option>
+                                    <option value="Dental">Dental</option>
+                                    <option value="Gynacologist">Gynacologist</option>
+                                    <option value="Gastroentrology">Gastroentrology</option>
+                                    <option value="Specialist in Surgery">Specialist in Surgery</option>
+                                    <option value="Eye Specialist">Eye Specialist</option>
+                                    <option value="Kidney & Dialysis">Kidney & Dialysis</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Neurology">Neurology</option>
+                                    <option value="Pediatrics">Pediatrics</option>
+                                    <option value="Orthopedics">Orthopedics</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="appointment-date" style="font-weight: 500; color: #333;">Appointment
+                                    Date:</label><br>
+                                <input type="date" id="appointment-date" name="appointment-date" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="notes" style="font-weight: 500; color: #333;">Additional Notes
+                                    (optional):</label><br>
+                                <textarea id="notes" name="notes" rows="3"
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                style="background-color: #007BFF; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                                Book Appointment
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </section>
+
+
+
 
 
             <section id="medicine-request" style="background-color: #f5faff; padding: 60px 0;">
-                <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; padding: 0 20px;">
-              
-                  <!-- Image Block -->
-                  <div style="flex: 1 1 400px;">
-                    <img src="img/Capsule.jpg" alt="Emergency Medicine" style="width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-                    <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #333;">Our services include 24-hour medicine delivery</p>
-                  </div>
-              
-                  <!-- Form Block -->
-                  <div style="flex: 1 1 400px;">
-                    <h2 style="color: #007BFF; margin-bottom: 25px;">Request Emergency Medicine</h2>
-                    <form onsubmit="return showPopup()" style="display: flex; flex-direction: column; gap: 20px;">
-                      
-                      <div>
-                        <label for="name" style="font-weight: 500; color: #333;">Customer Name:</label><br>
-                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-                      </div>
-              
-                      <div>
-                        <label for="contact" style="font-weight: 500; color: #333;">Contact:</label><br>
-                        <input type="text" id="contact" name="contact" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-                      </div>
-              
-                      <div>
-                        <label for="address" style="font-weight: 500; color: #333;">Address:</label><br>
-                        <textarea id="address" name="address" rows="3" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-                      </div>
-              
-                      <div>
-                        <label for="prescription" style="font-weight: 500; color: #333;">Attach Prescription Image:</label><br>
-                        <input type="file" id="prescription" name="prescription" accept="image/*" required>
-                      </div>
-              
-                      <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-                        Send Request
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </section>
-              
-              
+                <div
+                    style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; padding: 0 20px;">
 
+                    <!-- Image Block -->
+                    <div style="flex: 1 1 400px;">
+                        <img src="img/Capsule.jpg" alt="Emergency Medicine"
+                            style="width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #333;">Our services
+                            include 24-hour medicine delivery</p>
+                    </div>
 
-            <!-- Consultants -->
-            <section class="section">
-                <h2>Our Consultants</h2>
-                <div class="grid">
-                    <div class="card">
-                        <img src="img/Doctor1.jpg" alt="Dr. John Smith" />
-                        <h4>Dr. John Smith</h4>
-                        <p>Cardiologist</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/Doctor3.jpg" alt="Dr. Ayesha Rahman" />
-                        <h4>Dr. Ayesha Rahman</h4>
-                        <p>Neurologist</p>
-                    </div>
-                    <div class="card">
-                        <img src="img/Dakhtor2.jpg" alt="Dr. Karim Ali" />
-                        <h4>Dr. Karim Ali</h4>
-                        <p>General Physician</p>
+                    <!-- Form Block -->
+                    <div style="flex: 1 1 400px;">
+                        <h2 style="color: #007BFF; margin-bottom: 25px;">Request Emergency Medicine</h2>
+                        <form onsubmit="return showPopup()" style="display: flex; flex-direction: column; gap: 20px;">
+
+                            <div>
+                                <label for="name" style="font-weight: 500; color: #333;">Customer Name:</label><br>
+                                <input type="text" id="name" name="name" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="contact" style="font-weight: 500; color: #333;">Contact:</label><br>
+                                <input type="text" id="contact" name="contact" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                            </div>
+
+                            <div>
+                                <label for="address" style="font-weight: 500; color: #333;">Address:</label><br>
+                                <textarea id="address" name="address" rows="3" required
+                                    style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                            </div>
+
+                            <div>
+                                <label for="prescription" style="font-weight: 500; color: #333;">Attach Prescription
+                                    Image:</label><br>
+                                <input type="file" id="prescription" name="prescription" accept="image/*" required>
+                            </div>
+
+                            <button type="submit"
+                                style="background-color: #007BFF; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                                Send Request
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>
+
+
+
+
+
 
             <!-- Departments -->
             <section class="section">
@@ -321,13 +370,13 @@
             </section>
 
             <!-- Emergency -->
-            <section class="section emergency">
+            <section class=" section emergency">
                 <h2>Emergency Call</h2>
                 <p>📞 Call us now: <strong>+880 1716757857</strong></p>
             </section>
 
             <!-- Ambulance -->
-            <section class="section ambulance">
+            <section class=" section ambulance">
                 <h2>24/7 Ambulance Service</h2>
                 <p>We are ready anytime, anywhere</p>
                 <img src="img/ambulance.jpg" alt="Ambulance" />
@@ -467,18 +516,18 @@
 
         <script>
             function showPopup() {
-              alert("✅ Your medicine request has been sent successfully!");
-          
-              // Clear the form after submission
-              document.querySelector("#medicine-request form").reset();
-          
-              return false; // Prevent actual form submission
+                alert("✅ Your medicine request has been sent successfully!");
+
+                // Clear the form after submission
+                document.querySelector("#medicine-request form").reset();
+
+                return false; // Prevent actual form submission
             }
-          </script>
-          
-       
-        
-          
+        </script>
+
+
+
+
 
 
     </body>
