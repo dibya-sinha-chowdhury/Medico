@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medico</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="medico.css">
+    <style type="text/css">
+        body {
+            margin: 0;
+            background-color: #f3f3f3;
+        }
+
+        main {
+            padding: 40px;
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .doctor-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .doctor-card img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .doctor-info {
+            padding: 15px;
+        }
+
+        .doctor-info h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+
+        .doctor-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .doctor-card button {
+            margin-top: 10px;
+            background: #23b8ec;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header bg-blue">
+        <nav class="navbar bg-blue">
+            <div class="container flex">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/medico logo.png" alt="site logo">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="doctors.html" class="nav-link">Doctors</a>
+                    </li>
+                    <li class="nav-item" id="button-sign-in">
+                        <a href="signIN.html">Log in</a>
+                    </li>
+                    <li class="nav-item" id="button-sign-up">
+                        <a href="signUP.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- end of header -->
+
+
+    <!-- Body Starts here -->
+    <main>
+        <div class="doctor-grid">
+            <!-- Repeat this card 6 times -->
+            <div class="doctor-card">
+                <img src="img\doctor.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Dave Thompson, MBBS</h3>
+                    <p>Medicine</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor1.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Franklyn, MBBS</h3>
+                    <p>Dental</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor2.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Anusha Kapil, MBBS</h3>
+                    <p>Cardiologist</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor3.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Michelle Climpton, MBBS</h3>
+                    <p>Gynacologist</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor4.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Swift Taylor, MBBS</h3>
+                    <p>Eye Specialist</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor5.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. David Miller, MBBS</h3>
+                    <p>Gastroentrology</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor6.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Emma Harris, MBBS</h3>
+                    <p>Specialist in Surgery</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor7.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Nithin Bhattacharya, MBBS</h3>
+                    <p>Neurology</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor8.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Anjali Barma, MBBS</h3>
+                    <p>Paediatric</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+            <div class="doctor-card">
+                <img src="img\doctor9.jpg" alt="Doctor" />
+                <div class="doctor-info">
+                    <h3>Dr. Sani Ahmed, MBBS</h3>
+                    <p>Kidney & Dialysis</p>
+                    <button onclick="location.href='book.html'">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- footer  -->
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <div class="footer-inner text-white py grid">
+                <div class="footer-item">
+                    <h3 class="footer-head">about us</h3>
+                    <div class="icon">
+                        <img src="images/logo.png" alt>
+                    </div>
+                    <p class="text text-md">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis saepe
+                        incidunt fugiat optio corporis ea!</p>
+                    <address>
+                        Medic Clinic <br>
+                        69 Deerpark Rd, Mount Merrion <br>
+                        Co. Dublin, A94 E9D3 <br>
+                        Ireland
+                    </address>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">tags</h3>
+                    <ul class="tags-list flex">
+                        <li>medical care</li>
+                        <li>emergency</li>
+                        <li>therapy</li>
+                        <li>surgery</li>
+                        <li>medication</li>
+                        <li>nurse</li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="text-white">Our Services</a></li>
+                        <li><a href="#" class="text-white">Our Plan</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">make an appointment</h3>
+                    <p class="text text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, omnis.
+                    </p>
+                    <ul class="appointment-info">
+                        <li>8:00 AM - 11:00 AM</li>
+                        <li>2:00 PM - 05:00 PM</li>
+                        <li>8:00 PM - 11:00 PM</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>revomedic@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+003 478 2834(00)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <ul class="flex">
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer  -->
+
+    <!-- custom js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
