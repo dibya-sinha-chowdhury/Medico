@@ -106,15 +106,15 @@
         /* ===== Hero Banner ===== */
 .hero-banner{
   width: 100%;
-  overflow: hidden;          
+  overflow: hidden;          /* বাড়তি অংশ কেটে ফেলবে */
 }
 
 .hero-banner img{
   width: 100%;
   /* height:—responsive clamp: 220px(min)‒35vw(ideal)‒450px(max) */
   height: clamp(220px, 35vw, 450px);
-  object-fit: cover;         
-  display: block;            
+  object-fit: cover;         /* ছবিকে ক্রপ করে ভরিয়ে দেয় */
+  display: block;            /* inline-gap সমস্যা রুখতে */
 }
 
         
@@ -338,7 +338,83 @@
             </section>
         </main>
 
-        <!-- ========= Add your shared footer here ========= -->
+        <!-- footer  -->
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <div class="footer-inner text-white py grid">
+                <div class="footer-item">
+                    <h3 class="footer-head">about us</h3>
+                    <div class="icon">
+                        <img src="images/logo.png" alt>
+                    </div>
+                    <p class="text text-md">Welcome to Medico — where your health comes first.
+
+                        We simplify your healthcare journey by making appointment booking quick and effortless. From routine check-ups to specialized care, Medico connects you with trusted doctors when you need them most.
+                        
+                        Your health matters. Book with confidence. Experience care that puts you first.
+                      </p>
+                    <address>
+                        Medical Appointment Booking Service <br>
+                        01 Jalalabad Rd, Amborkhana <br>
+                        Sylhet, 3100 <br>
+                        Bangladesh
+                    </address>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">tags</h3>
+                    <ul class="tags-list flex">
+                        <li>medical care</li>
+                        <li>emergency</li>
+                        <li>therapy</li>
+                        <li>surgery</li>
+                        <li>medication</li>
+                        <li>nurse</li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">Quick Links</h3>
+                    <ul>
+                        <li><a href="#" class="text-white">Our Services</a></li>
+                        <li><a href="#" class="text-white">Our Plan</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Appointment Schedule</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                    <h3 class="footer-head">make an appointment</h3>
+                    <p class="text text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, omnis.
+                    </p>
+                    <ul class="appointment-info">
+                        <li>8:00 AM - 11:00 AM</li>
+                        <li>2:00 PM - 05:00 PM</li>
+                        <li>8:00 PM - 11:00 PM</li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>revomedic@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+003 478 2834(00)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <ul class="flex">
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="text-white flex"> <i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer  -->
+
+
     </body>
 
     </html>
