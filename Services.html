@@ -102,22 +102,23 @@
         }
 
         /* ---------- Banner ---------- */
-        
+
         /* ===== Hero Banner ===== */
-.hero-banner{
-  width: 100%;
-  overflow: hidden;          /* বাড়তি অংশ কেটে ফেলবে */
-}
+        .hero-banner {
+            width: 100%;
+            overflow: hidden;
+          
+        }
 
-.hero-banner img{
-  width: 100%;
-  /* height:—responsive clamp: 220px(min)‒35vw(ideal)‒450px(max) */
-  height: clamp(220px, 35vw, 450px);
-  object-fit: cover;         /* ছবিকে ক্রপ করে ভরিয়ে দেয় */
-  display: block;            /* inline-gap সমস্যা রুখতে */
-}
-
-        
+        .hero-banner img {
+            width: 100%;
+            /* height:—responsive clamp: 220px(min)‒35vw(ideal)‒450px(max) */
+            height: clamp(220px, 35vw, 450px);
+            object-fit: cover;
+            
+            display: block;
+            
+        }
     </style>
 </head>
 
@@ -174,7 +175,7 @@
 
         <!-- Hero / Banner Section -->
         <section class="hero-banner">
-            <!--  ➜ আপনি নিজের ছবির path দিন -->
+           
             <img src="img/Banner main.jpg" alt="Medico Services Banner">
         </section>
 
@@ -223,6 +224,52 @@
                     <button type="submit">Book Now</button>
                 </form>
             </section>
+
+
+            <section id="medicine-request" style="background-color: #f5faff; padding: 60px 0;">
+                <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 40px; padding: 0 20px;">
+              
+                  <!-- Image Block -->
+                  <div style="flex: 1 1 400px;">
+                    <img src="img/Capsule.jpg" alt="Emergency Medicine" style="width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+                    <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #333;">Our services include 24-hour medicine delivery</p>
+                  </div>
+              
+                  <!-- Form Block -->
+                  <div style="flex: 1 1 400px;">
+                    <h2 style="color: #007BFF; margin-bottom: 25px;">Request Emergency Medicine</h2>
+                    <form onsubmit="return showPopup()" style="display: flex; flex-direction: column; gap: 20px;">
+                      
+                      <div>
+                        <label for="name" style="font-weight: 500; color: #333;">Customer Name:</label><br>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                      </div>
+              
+                      <div>
+                        <label for="contact" style="font-weight: 500; color: #333;">Contact:</label><br>
+                        <input type="text" id="contact" name="contact" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                      </div>
+              
+                      <div>
+                        <label for="address" style="font-weight: 500; color: #333;">Address:</label><br>
+                        <textarea id="address" name="address" rows="3" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                      </div>
+              
+                      <div>
+                        <label for="prescription" style="font-weight: 500; color: #333;">Attach Prescription Image:</label><br>
+                        <input type="file" id="prescription" name="prescription" accept="image/*" required>
+                      </div>
+              
+                      <button type="submit" style="background-color: #007BFF; color: white; padding: 12px 25px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                        Send Request
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </section>
+              
+              
+
 
             <!-- Consultants -->
             <section class="section">
@@ -339,80 +386,99 @@
         </main>
 
         <!-- footer  -->
-    <footer id="footer" class="footer text-center">
-        <div class="container">
-            <div class="footer-inner text-white py grid">
-                <div class="footer-item">
-                    <h3 class="footer-head">about us</h3>
-                    <div class="icon">
-                        <img src="images/logo.png" alt>
+        <footer id="footer" class="footer text-center">
+            <div class="container">
+                <div class="footer-inner text-white py grid">
+                    <div class="footer-item">
+                        <h3 class="footer-head">about us</h3>
+                        <div class="icon">
+                            <img src="images/logo.png" alt>
+                        </div>
+                        <p class="text text-md">Welcome to Medico — where your health comes first.
+
+                            We simplify your healthcare journey by making appointment booking quick and effortless. From
+                            routine check-ups to specialized care, Medico connects you with trusted doctors when you
+                            need them most.
+
+                            Your health matters. Book with confidence. Experience care that puts you first.
+                        </p>
+                        <address>
+                            Medical Appointment Booking Service <br>
+                            01 Jalalabad Rd, Amborkhana <br>
+                            Sylhet, 3100 <br>
+                            Bangladesh
+                        </address>
                     </div>
-                    <p class="text text-md">Welcome to Medico — where your health comes first.
 
-                        We simplify your healthcare journey by making appointment booking quick and effortless. From routine check-ups to specialized care, Medico connects you with trusted doctors when you need them most.
-                        
-                        Your health matters. Book with confidence. Experience care that puts you first.
-                      </p>
-                    <address>
-                        Medical Appointment Booking Service <br>
-                        01 Jalalabad Rd, Amborkhana <br>
-                        Sylhet, 3100 <br>
-                        Bangladesh
-                    </address>
+                    <div class="footer-item">
+                        <h3 class="footer-head">tags</h3>
+                        <ul class="tags-list flex">
+                            <li>medical care</li>
+                            <li>emergency</li>
+                            <li>therapy</li>
+                            <li>surgery</li>
+                            <li>medication</li>
+                            <li>nurse</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item">
+                        <h3 class="footer-head">Quick Links</h3>
+                        <ul>
+                            <li><a href="#" class="text-white">Our Services</a></li>
+                            <li><a href="#" class="text-white">Our Plan</a></li>
+                            <li><a href="#" class="text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-white">Appointment Schedule</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item">
+                        <h3 class="footer-head">make an appointment</h3>
+                        <p class="text text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+                            omnis.
+                        </p>
+                        <ul class="appointment-info">
+                            <li>8:00 AM - 11:00 AM</li>
+                            <li>2:00 PM - 05:00 PM</li>
+                            <li>8:00 PM - 11:00 PM</li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>revomedic@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+003 478 2834(00)</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="footer-item">
-                    <h3 class="footer-head">tags</h3>
-                    <ul class="tags-list flex">
-                        <li>medical care</li>
-                        <li>emergency</li>
-                        <li>therapy</li>
-                        <li>surgery</li>
-                        <li>medication</li>
-                        <li>nurse</li>
-                    </ul>
-                </div>
-
-                <div class="footer-item">
-                    <h3 class="footer-head">Quick Links</h3>
-                    <ul>
-                        <li><a href="#" class="text-white">Our Services</a></li>
-                        <li><a href="#" class="text-white">Our Plan</a></li>
-                        <li><a href="#" class="text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white">Appointment Schedule</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-item">
-                    <h3 class="footer-head">make an appointment</h3>
-                    <p class="text text-md">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, omnis.
-                    </p>
-                    <ul class="appointment-info">
-                        <li>8:00 AM - 11:00 AM</li>
-                        <li>2:00 PM - 05:00 PM</li>
-                        <li>8:00 PM - 11:00 PM</li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>revomedic@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+003 478 2834(00)</span>
-                        </li>
+                <div class="footer-links">
+                    <ul class="flex">
+                        <li><a href="#" class="text-white flex"> <i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="text-white flex"> <i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="text-white flex"> <i class="fab fa-linkedin"></i></a></li>
                     </ul>
                 </div>
             </div>
+        </footer>
+        <!-- end of footer  -->
 
-            <div class="footer-links">
-                <ul class="flex">
-                    <li><a href="#" class="text-white flex"> <i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#" class="text-white flex"> <i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" class="text-white flex"> <i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    <!-- end of footer  -->
+
+        <script>
+            function showPopup() {
+              alert("✅ Your medicine request has been sent successfully!");
+          
+              // Clear the form after submission
+              document.querySelector("#medicine-request form").reset();
+          
+              return false; // Prevent actual form submission
+            }
+          </script>
+          
+       
+        
+          
 
 
     </body>
