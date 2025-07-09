@@ -56,6 +56,9 @@ function getBotReply(message) {
   } else if (msg.includes("itching")) {
     return "May be a result of fungal infection. Keep the body part clean and consult a doctor";
   }
+  else if (msg.includes("headache")) {
+    return "Headache can be caused by various reasons among that Headaches due to high screen time, empty stomach or migrane is very prominent";
+  }
   else if (msg.includes("hi") || msg.includes("hello")) {
     return "Hello! 👋 How can I help you today?";
   } else {
