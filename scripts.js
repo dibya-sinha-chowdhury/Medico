@@ -53,7 +53,10 @@ function getBotReply(message) {
     return "You can book an appointment at hospital.com/appointments.";
   } else if (msg.includes("covid")) {
     return "For COVID-19 support, visit who.int or call your local health authority.";
-  } else if (msg.includes("hi") || msg.includes("hello")) {
+  } else if (msg.includes("itching")) {
+    return "May be a result of fungal infection. Keep the body part clean and consult a doctor";
+  }
+  else if (msg.includes("hi") || msg.includes("hello")) {
     return "Hello! 👋 How can I help you today?";
   } else {
     return "I'm MediBot. Please describe your symptoms or ask a question.";
