@@ -83,11 +83,81 @@
             cursor: pointer;
         }
 
+
+        .info-box {
+            border: 2px solid #0d6624;
+            /* Dark green border */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            background-color: #f9fdf9;
+            /* Optional light greenish background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-box h2 {
+            color: #0d6624;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .info-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: center;
+            color: #333;
+        }
+
+
+
+
+
+
+
+
+
         /* ---------- Emergency & Ambulance ---------- */
+
+
+        .emergency-section {
+            width: 100vw;
+            /* full viewport width */
+            background-color: #ffe5b4;
+            /* light orange */
+            padding: 30px 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        .emergency-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .emergency-section p {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        .emergency-section strong {
+            color: #d35400;
+            /* deeper orange to emphasize phone number */
+        }
+
+
+
+
+
+
+
+
+
         .emergency,
         .ambulance {
             text-align: center;
             background: #fff;
+
             padding: 30px 20px;
             border-radius: 8px;
             margin: 20px 0;
@@ -118,6 +188,66 @@
 
             display: block;
 
+        }
+
+        .book-now-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+
+        }
+
+        .book-now-btn:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Shadow on click */
+        .book-now-btn:active {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(0.98);
+        }
+
+
+
+        .info-partition-block {
+            display: flex;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-partition-block .left-side {
+            width: 50%;
+            padding: 20px;
+            background-color: #0056b3;
+            /* Blue */
+            color: white;
+        }
+
+        .info-partition-block .right-side {
+            width: 50%;
+            padding: 20px;
+            background-color: #2fad2f;
+            /* White */
+            color: white;
+        }
+
+        .info-partition-block h3 {
+            margin-bottom: 10px;
+            color: inherit;
+            /* Will take color from left/right block */
+        }
+
+        .info-partition-block ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -283,6 +413,27 @@
                 </div>
             </section>
 
+            <section id="health-awareness" style="background-color: #ffffff; padding: 50px 0; text-align: center;">
+                <div class="info-box" style="max-width: 100%; margin: auto;">
+                    <h1 style="color: #07760d; margin-bottom: 20px;">Stay Informed, Stay Healthy</h1>
+                    <p style="font-size: 20px; color: #333; line-height: 1.5; max-width: 900px; margin: 0 auto 30px;">
+                        Your health is your most valuable asset, and at MediCo, we are committed to helping you protect
+                        it. We go beyond just providing quality medical services — we believe that empowering
+                        individuals through education is equally important.
+                        By staying informed about preventive care, early warning signs of illness, and the importance of
+                        timely medical intervention, you can make smarter decisions for yourself and your loved ones. At
+                        MediCo, we aim to be your trusted partner not only in treatment but also in awareness and
+                        wellness. Because a well-informed patient is a healthier patient.
+                    </p>
+
+                    <img src="img/Wealth2.webp" alt="Health Awareness"
+                        style="width: 100%; height: 250px; object-fit: cover; display: block; margin: 0 auto;">
+
+                </div>
+            </section>
+
+
+
 
 
 
@@ -297,6 +448,23 @@
                             style="width: 100%; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
                         <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #333;">Our services
                             include 24-hour medicine delivery</p>
+                        <div
+                            style="margin-top: 25px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            <h3 style="color: #007BFF; font-size: 24px; margin-bottom: 10px;">Reliable 24/7 Medicine
+                                Delivery</h3>
+                            <p style="font-size: 16px; color: #333; line-height: 1.6;">
+                                At Medico, we understand that emergencies don’t wait — and neither should you. That’s
+                                why our emergency medicine delivery service is always active and ready to respond.
+                                Whether it's day or night, our team works around the clock to ensure your prescribed
+                                medicines reach you as fast as possible. We prioritize urgent needs and deliver directly
+                                to your doorstep with care and speed.
+                            </p>
+                            <p style="font-size: 16px; color: #007BFF; font-weight: bold; margin: 15px 0;">
+                                ✅ Always Active &nbsp; • &nbsp; ✅ Fast Delivery &nbsp; • &nbsp; ✅ Trusted Service
+                            </p>
+
+                        </div>
+
                     </div>
 
                     <!-- Form Block -->
@@ -366,20 +534,82 @@
                         <h4>Pediatrics</h4>
                         <p>Child Care</p>
                     </div>
-                </div>
+                    <div class="grid">
+                        <div class="card">
+                            <img src="img/heart1.jpg" alt="Cardiology" />
+                            <h4>Cardiology</h4>
+                            <p>Heart Treatment</p>
+                        </div>
+
+                    </div>
+                    <div class="card">
+                        <img src="img/brain.jpg" alt="Neurology" />
+                        <h4>Neurology</h4>
+                        <p>Brain & Nerves</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/ortho.webp" alt="Orthopedics" />
+                        <h4>Orthopedics</h4>
+                        <p>Bone & Joints</p>
+                    </div>
+                    <div class="card">
+                        <img src="img/pedi.jpg" alt="Pediatrics" />
+                        <h4>Pediatrics</h4>
+                        <p>Child Care</p>
+                    </div>
+
             </section>
 
             <!-- Emergency -->
-            <section class=" section emergency">
-                <h2>Emergency Call</h2>
-                <p>📞 Call us now: <strong>+880 1716757857</strong></p>
-            </section>
+            <div class="emergency-section">
+                <h2>Emergency Call</h2>
+                <p>📞 Call us now: <strong>+880 1716757857</strong></p>
+            </div>
+
+
+            <div class="info-partition-block">
+                <div class="left-side">
+                    <h3>Why Choose Medico?</h3>
+                    <p>Trusted care, expert doctors, and 24/7 support at your service.</p>
+                </div>
+                <div class="right-side">
+                    <h3>Available Facilities</h3>
+                    <ul>
+                        <li>Emergency Response</li>
+                        <li>Instant Appointment Booking</li>
+                        <li>Modern Equipment</li>
+                    </ul>
+                </div>
+            </div>
+
 
             <!-- Ambulance -->
-            <section class=" section ambulance">
+            <section class="section ambulance">
                 <h2>24/7 Ambulance Service</h2>
                 <p>We are ready anytime, anywhere</p>
                 <img src="img/ambulance.jpg" alt="Ambulance" />
+
+                <button class="book-now-btn" onclick="showDriverInfo()"
+                    style="margin-top: 20px; padding: 12px 25px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                    🚑 Book Now
+                </button>
+
+                <div id="driverPopup"
+                    style="display:none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                background-color: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000; width: 90%; max-width: 400px; text-align: center;">
+                    <h3>Ambulance Drivers</h3>
+                    <p><strong>Driver-1:</strong> 01716857452 (Debanjan Roy)</p>
+                    <p><strong>Driver-2:</strong> 01716857440 (Faz Ahmed)</p>
+                    <p><strong>Driver-3:</strong> 01716857460 (Badhon)</p>
+                    <button onclick="closeDriverPopup()"
+                        style="margin-top: 15px; padding: 8px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+                </div>
+
+                <!-- Optional overlay background -->
+                <div id="overlay"
+                    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.4); z-index:999;"
+                    onclick="closeDriverPopup()"></div>
+
             </section>
 
             <!-- Health Tips -->
@@ -515,6 +745,20 @@
 
 
         <script>
+            function showDriverInfo() {
+                document.getElementById("driverPopup").style.display = "block";
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            function closeDriverPopup() {
+                document.getElementById("driverPopup").style.display = "none";
+                document.getElementById("overlay").style.display = "none";
+            }
+        </script>
+
+
+
+        <script>
             function showPopup() {
                 alert("✅ Your medicine request has been sent successfully!");
 
@@ -524,11 +768,6 @@
                 return false; // Prevent actual form submission
             }
         </script>
-
-
-
-
-
 
     </body>
 
